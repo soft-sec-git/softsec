@@ -1,19 +1,19 @@
 /*******************************/
 /*         Navigatioin         */
 /*******************************/
-.navbar-inverse { border-radius: 0; background:rgba(0, 0, 0, .8); border-bottom:1px solid rgba(255, 255, 255, 0.15); min-height:100px; padding-top:25px; margin-bottom:0;}
-.navbar-inverse *:focus { outline: 0; }
+.navbar-inverse { border-radius: 0; background:rgba(0, 0, 0, .8); border-bottom:1.5px dotted rgb(255, 255, 255); min-height:100px; padding-top:25px; margin-bottom:0;}
+.navbar-inverse *:focus { outline: 0;}
 @media (max-width: 767px) {
 	.navbar-inverse {  background:rgba(0,0,0,.9); }
 }
 
 .navbar-inverse .navbar-nav > li > a,
-.navbar-inverse .navbar-nav > .open ul > a { color:rgba(255, 255, 255, .4); }
+.navbar-inverse .navbar-nav > .open ul > a { color:rgb(255, 255, 255); font-size: 16px; }
 
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover, 
-.navbar-inverse .navbar-nav > .active > a:focus { color: #fff; background:none ; }
-.navbar-inverse .navbar-nav > .open > a{ background:none; color:white; }
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover 
+.navbar-inverse .navbar-nav > .active > a:focus { color: rgb(255, 255, 255); background:none; animation: glitch 5s infinite}
+.navbar-inverse .navbar-nav > .open > a{ background:none; color:rgb(255, 255, 255);}
 
 .navbar-inverse .navbar-nav>li>a:hover, 
 .navbar-inverse .navbar-nav>li>a:focus,
@@ -22,24 +22,8 @@
 
 .navbar-inverse .navbar-nav > .active > a { background:none; color:white; }
 
-.navbar-inverse .navbar-brand { font-family: "Open sans", helvetica, arial; font-size: 24px; color:white; padding:0 0 0 15px; margin:12px 0 0 0; }
-	.navbar-inverse .navbar-brand img { margin-top:-8px;}
-
-.navbar-nav .dropdown-menu {
-	left:-5px;
-	font-size: 13px;
-	background-color: rgba(0, 0, 0, .7);
-	border: 0px none;
-	-webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px;
-	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-}
-.navbar-nav .dropdown-menu > li > a { color:rgba(255, 255, 255, .7); padding:7px 20px; }
-	.navbar-nav .dropdown-menu > li > a:hover,
-	.navbar-nav .dropdown-menu > li > a:focus,
-	.navbar-nav .dropdown-menu > .active > a:hover{ background: rgba(255, 255, 255, .1); color:white; }
-
-.navbar-nav .dropdown-menu > .active > a,
-.navbar-nav .dropdown-menu > .active > a:focus { background: none; color:#fff; }
+.navbar-inverse .navbar-brand { font-family: "Open sans", helvetica, arial; font-size: 34px; color:white; padding:0 0 0 15px; margin:1px 0 0 0; }
+	.navbar-inverse .navbar-brand img { margin-top:1px;}
 
 .navbar-nav .btn { border:1px solid rgba(255, 255, 255, .2); margin-left:5px; margin-top:5px; padding-top:10px; padding-bottom:10px; }
 
@@ -96,3 +80,58 @@
 /*           Images            */
 /*******************************/
 .img-rounded { -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+
+@keyframes glitch {
+	0% {
+	  transform: none;
+	  opacity: 1;
+	}
+	7% {
+	  transform: skew(-2deg, -5deg);
+	  opacity: 1;
+	}
+	10% {
+	  transform: none;
+	  opacity: 1;
+	}
+	27% {
+	  transform: none;
+	  opacity: 1;
+	}
+	30% {
+	  transform: skew(5deg, -4deg);
+	  opacity: 1;
+	}
+	35% {
+	  transform: none;
+	  opacity: 0;
+	}
+	52% {
+	  transform: none;
+	  opacity: 0;
+	}
+	55% {
+	  transform: skew(-4deg, 4deg);
+	  opacity: 1;
+	}
+	50% {
+	  transform: none;
+	  opacity: 0;
+	}
+	72% {
+	  transform: none;
+	  opacity: 0;
+	}
+	75% {
+	  transform: skew(0.4deg, 1deg);
+	  opacity: 1;
+	}
+	80% {
+	  transform: none;
+	  opacity: 1;
+	}
+	100% {
+	  transform: none;
+	  opacity: 0;
+	}
+  }
